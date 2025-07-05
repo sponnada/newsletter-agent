@@ -1,0 +1,56 @@
+
+{
+  "sources": {
+    "hackernews": {
+      "enabled": true
+    },
+    "rss_feeds": {
+      "enabled": true,
+      "urls": [
+        "https://feeds.feedburner.com/oreilly/radar",
+        "https://blog.openai.com/rss/",
+        "https://www.technologyreview.com/feed/"
+      ]
+    },
+    "google_news": {
+      "enabled": false,
+      "api_key": ""
+    },
+    "reddit": {
+      "enabled": false,
+      "subreddits": ["programming", "MachineLearning", "artificial", "technology"]
+    },
+    "nytimes": {
+      "enabled": false,
+      "api_key": ""
+    },
+    "gmail": {
+      "enabled": false,
+      "query": "from:newsletters OR subject:important"
+    }
+  },
+  "preferences": {
+    "frequency": "daily",
+    "max_items": 15,
+    "categories": ["Technology", "AI", "Programming"],
+    "include_keywords": [],
+    "exclude_keywords": ["celebrity", "sports"],
+    "min_score": 0
+  },
+  "output": {
+    "format": "markdown",
+    "email_to": "",
+    "email_from": "",
+    "email_password": "",
+    "save_to_file": true,
+    "filename_template": "newsletter_{date}.md"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "newsletter_agent.log"
+  },
+  "database": {
+    "type": "sqlite",
+    "connection_string": "sqlite:///newsletter.db"
+  }
+}
