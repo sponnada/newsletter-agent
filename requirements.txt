@@ -6,3 +6,9 @@ python-dateutil==2.8.2
 python-dotenv==0.21.0
 sqlalchemy==1.4.47
 sqlalchemy-utils==0.37.8
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+requests
+python-dotenv
+flask

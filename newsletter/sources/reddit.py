@@ -26,6 +26,10 @@ class RedditSource:
     
     def _setup_reddit(self):
         """Setup Reddit API client"""
+        if not PRAW_AVAILABLE:
+            logger.warning("praw library not installed. Cannot set up Reddit client.")
+            return
+            
         client_id = os.getenv('REDDIT_CLIENT_ID')
         client_secret = os.getenv('REDDIT_CLIENT_SECRET')
         

@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from typing import List, Optional
 
@@ -12,11 +12,10 @@ class NewsItem:
     published_at: Optional[datetime] = None
     score: int = 0
     category: str = ""
-    keywords: List[str] = None
+    keywords: List[str] = field(default_factory=list)
     
     def __post_init__(self):
-        if self.keywords is None:
-            self.keywords = []
+        pass
     
     def matches_keywords(self, include_keywords: List[str], exclude_keywords: List[str]) -> bool:
         """Check if item matches keyword filters"""

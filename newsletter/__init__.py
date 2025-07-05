@@ -1,4 +1,4 @@
-from .agent import NewsletterAgent
+from newsletter.agent import NewsletterAgent
 from .models import NewsItem
 
 __version__ = "1.0.0"
